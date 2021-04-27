@@ -1,0 +1,53 @@
+#Versiyon Kontrolü
+git --version
+
+# Git Yardım
+git help
+git <komut> -h
+git help <komut>m
+git init -h
+git help init
+
+#Kullanıcı Adı-Email Ayarları
+#Ayarları Görüntülemek
+git config user.name //Kullanıcı adı görüntüle
+git config user.email // Mail adresini görüntüle
+#Kullanıcı Adı ve Email Ayarlama
+git config --global user.name "İsminiz"
+git config --global user.email "sizin@mailiniz"
+#Default text editörünü ayarlama
+git config core.editor //Default text editörünü görüntüle
+git config --global core.editor <text editörü>
+
+#Local'de Git reposu oluşturma
+git init 
+#Reponun durumunu öğrenme
+git status . 
+#İçerik eklemek
+git add .
+git add dosya
+#Dosyaya yorum eklemek
+git commit -m "Mesajınız"
+#Yorum geçmişini okumak
+git log
+
+#Localde kurduğumuz repodan remote repoya gönderme
+git remote add origin <remote reposu>
+git branch -M main
+git push -u origin main
+
+#Yeni içerik eklendikten ve commitlendikten sonra remote repoya gönderme
+git push origin master
+
+#Branchleri göstermek ve Branchlerle oynamak
+git branch //Branchleri göster
+git branch yenibranch //Yeni branch oluştur
+git checkout yenibranch //Branch seçmek
+git branch --all // Bütün branchleri çekmek için
+git diff master yenibranch //Branchler arasındaki farklılıklar
+git merge yenibranch //Branchleri birleştirme
+
+git fetch // Remote repoda branchte yapılan değişiklikleri çekmek için
+git pull // Remote repodan dosyaları çekmek
+git rebase yenibranch // Merge alternatifi olarak branchleri birleştirmek
+git rebase -i HEAD-3 // Son 3 commiti birleştirmek
